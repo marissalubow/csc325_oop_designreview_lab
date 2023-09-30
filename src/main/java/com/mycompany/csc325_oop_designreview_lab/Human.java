@@ -10,33 +10,62 @@ package com.mycompany.csc325_oop_designreview_lab;
  */
 public abstract class Human {
     private String name;
-	private String address;
-	private short age;
+	protected String address;
+	private int age;
 
-	// constructor that takes only two paras
-	public Human(String name, short age) {
+	/**
+	 *
+	 * default constructor
+	 */
+	 Human()
+	{
+		this.name = "name";
+		this.age = 0;
+	}
+
+	/**
+	 *paramerterized constructor
+	 */
+	public Human(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
 
+	/**
+	 * get method for name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * set method for name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public abstract String getAddress() ;
+	/**
+	 * abstract method for get address
+	 */
+	public abstract String getAddress();
 
+	/**
+	 * abstract method for set address
+	 */
 	public abstract void setAddress(String address);
 
-
-	public short getAge() {
+   /**
+	* get method for age
+    */
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(short age) {
+	/**
+	 * set method for age
+	 */
+	public void setAge(int age) {
 		this.age = age;
 	}
 }
